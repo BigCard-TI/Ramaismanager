@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>RamaisManager</AssemblyName>
+    <RootNamespace>RamaisManager</RootNamespace>
+    <Version>1.0.0</Version>
+    <Authors>BigCard TI</Authors>
+    <Product>Gerenciador de Ramais</Product>
+  </PropertyGroup>
+
+  <!--
+    Para usar um ícone customizado, coloque um arquivo app.ico na pasta do projeto
+    e descomente as linhas abaixo:
+
+    <PropertyGroup>
+      <ApplicationIcon>app.ico</ApplicationIcon>
+    </PropertyGroup>
+  -->
+
+</Project>
