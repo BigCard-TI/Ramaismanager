@@ -11,7 +11,12 @@
     <Version>1.0.0</Version>
     <Authors>BigCard TI</Authors>
     <Product>Gerenciador de Ramais</Product>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+  </ItemGroup>
 
   <!--
     Para usar um ícone customizado, coloque um arquivo app.ico na pasta do projeto
