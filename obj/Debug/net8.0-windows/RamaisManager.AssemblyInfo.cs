@@ -11,10 +11,10 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("BigCard TI")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Equipe de TI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38c7be2b8f9272ab8f351ea9ea72a1f194f57980")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d91c13068e273b54c00ec9338cf912eb966c09cd")]
 [assembly: System.Reflection.AssemblyProductAttribute("Gerenciador de Ramais")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RamaisManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

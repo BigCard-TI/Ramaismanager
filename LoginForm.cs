@@ -15,8 +15,7 @@ public partial class LoginForm : Form
         InitializeComponent();
         _connectionString = connectionString;
 
-        // Atalho oculto também disponível na tela de login, para o
-        // configurar
+        // Atalho oculto também disponível na tela de login, para o TI configurar
         // a connection string antes mesmo de logar (ex: primeira instalação).
         this.KeyDown += (s, e) =>
         {

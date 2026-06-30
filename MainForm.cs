@@ -23,7 +23,7 @@ public partial class MainForm : Form
 
         SetupGrid();
 
-        this.Text = $"Gerenciador de Ramais - MicroSIP — Operador: {_operador.Codigo}";
+        this.Text = $"Gerenciador de Ramais - MicroSIP — Operador: {_operador.PrimeiroNome}";
         this.KeyDown += MainForm_KeyDown;
         this.FormClosing += MainForm_FormClosing;
         this.Load += MainForm_Load;

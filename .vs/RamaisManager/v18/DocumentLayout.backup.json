@@ -3,36 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\rafael.souza\\Desktop\\BC - Rafael\\Projects\\Projects\\Ramaismanager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|c:\\users\\rafael.souza\\desktop\\bc - rafael\\projects\\projects\\ramaismanager\\ramaismanager.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|solutionrelative:ramaismanager.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|c:\\users\\rafael.souza\\desktop\\bc - rafael\\projects\\projects\\ramaismanager\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|solutionrelative:mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|c:\\users\\rafael.souza\\desktop\\bc - rafael\\projects\\projects\\ramaismanager\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|c:\\users\\rafael.souza\\desktop\\bc - rafael\\projects\\projects\\ramaismanager\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|solutionrelative:settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|c:\\users\\rafael.souza\\desktop\\bc - rafael\\projects\\projects\\ramaismanager\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|c:\\users\\rafael.souza\\desktop\\bc - rafael\\projects\\projects\\ramaismanager\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|solutionrelative:loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|c:\\users\\rafael.souza\\desktop\\bc - rafael\\projects\\projects\\ramaismanager\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|c:\\users\\rafael.souza\\desktop\\bc - rafael\\projects\\projects\\ramaismanager\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|c:\\users\\rafael.souza\\desktop\\bc - rafael\\projects\\projects\\ramaismanager\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|c:\\users\\rafael.souza\\desktop\\bc - rafael\\projects\\projects\\ramaismanager\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|c:\\users\\rafael.souza\\desktop\\bc - rafael\\projects\\projects\\ramaismanager\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|C:\\Users\\rafael.souza\\Desktop\\BC - Rafael\\Projects\\Projects\\Ramaismanager\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|c:\\users\\rafael.souza\\desktop\\bc - rafael\\projects\\projects\\ramaismanager\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|solutionrelative:mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|c:\\users\\rafael.souza\\desktop\\bc - rafael\\projects\\projects\\ramaismanager\\ramaismanager.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|solutionrelative:ramaismanager.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|C:\\Users\\rafael.souza\\Desktop\\BC - Rafael\\Projects\\Projects\\Ramaismanager\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|solutionrelative:settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2CA19817-0631-CB70-5548-2FCB8EF9EF98}|RamaisManager.csproj|c:\\users\\rafael.souza\\desktop\\bc - rafael\\projects\\projects\\ramaismanager\\config\\appsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,24 +50,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "LoginForm.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\rafael.souza\\Desktop\\BC - Rafael\\Projects\\Projects\\Ramaismanager\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LoginForm.cs",
+              "ToolTip": "C:\\Users\\rafael.souza\\Desktop\\BC - Rafael\\Projects\\Projects\\Ramaismanager\\LoginForm.cs [Projeto]",
+              "RelativeToolTip": "LoginForm.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-30T19:28:47.202Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "MainForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\rafael.souza\\Desktop\\BC - Rafael\\Projects\\Projects\\Ramaismanager\\MainForm.Designer.cs",
               "RelativeDocumentMoniker": "MainForm.Designer.cs",
               "ToolTip": "C:\\Users\\rafael.souza\\Desktop\\BC - Rafael\\Projects\\Projects\\Ramaismanager\\MainForm.Designer.cs",
               "RelativeToolTip": "MainForm.Designer.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-30T16:56:18.684Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "MainForm.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\rafael.souza\\Desktop\\BC - Rafael\\Projects\\Projects\\Ramaismanager\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
@@ -75,19 +91,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "SettingsForm.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\rafael.souza\\Desktop\\BC - Rafael\\Projects\\Projects\\Ramaismanager\\SettingsForm.cs",
               "RelativeDocumentMoniker": "SettingsForm.cs",
               "ToolTip": "C:\\Users\\rafael.souza\\Desktop\\BC - Rafael\\Projects\\Projects\\Ramaismanager\\SettingsForm.cs [Projeto]",
               "RelativeToolTip": "SettingsForm.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-30T16:56:06.786Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2026-06-30T16:56:06.786Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "RamaisManager",
               "DocumentMoniker": "C:\\Users\\rafael.souza\\Desktop\\BC - Rafael\\Projects\\Projects\\Ramaismanager\\RamaisManager.csproj",
               "RelativeDocumentMoniker": "RamaisManager.csproj",
@@ -99,57 +114,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "LoginForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\rafael.souza\\Desktop\\BC - Rafael\\Projects\\Projects\\Ramaismanager\\LoginForm.Designer.cs",
               "RelativeDocumentMoniker": "LoginForm.Designer.cs",
               "ToolTip": "C:\\Users\\rafael.souza\\Desktop\\BC - Rafael\\Projects\\Projects\\Ramaismanager\\LoginForm.Designer.cs",
               "RelativeToolTip": "LoginForm.Designer.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFkAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAMwG4AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-30T15:47:39.087Z"
+              "WhenOpened": "2026-06-30T15:47:39.087Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "C:\\Users\\rafael.souza\\Desktop\\BC - Rafael\\Projects\\Projects\\Ramaismanager\\LoginForm.cs",
               "RelativeDocumentMoniker": "LoginForm.cs",
               "ToolTip": "C:\\Users\\rafael.souza\\Desktop\\BC - Rafael\\Projects\\Projects\\Ramaismanager\\LoginForm.cs",
               "RelativeToolTip": "LoginForm.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAIA9wCUAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-30T15:47:36.769Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\rafael.souza\\Desktop\\BC - Rafael\\Projects\\Projects\\Ramaismanager\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
               "ToolTip": "C:\\Users\\rafael.souza\\Desktop\\BC - Rafael\\Projects\\Projects\\Ramaismanager\\MainForm.cs",
               "RelativeToolTip": "MainForm.cs",
-              "ViewState": "AgIAALwAAAAAAAAAAAAhwNcAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAIAwwEgAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-30T15:46:19.566Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\rafael.souza\\Desktop\\BC - Rafael\\Projects\\Projects\\Ramaismanager\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "Services\\AuthService.cs",
               "ToolTip": "C:\\Users\\rafael.souza\\Desktop\\BC - Rafael\\Projects\\Projects\\Ramaismanager\\Services\\AuthService.cs",
               "RelativeToolTip": "Services\\AuthService.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAMwCEAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-30T15:45:58.857Z"
+              "WhenOpened": "2026-06-30T15:45:58.857Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "AppSettings.cs",
               "DocumentMoniker": "C:\\Users\\rafael.souza\\Desktop\\BC - Rafael\\Projects\\Projects\\Ramaismanager\\Config\\AppSettings.cs",
               "RelativeDocumentMoniker": "Config\\AppSettings.cs",

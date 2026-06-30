@@ -67,7 +67,7 @@ partial class DbSettingsForm
         // txtServidor
         txtServidor.Location = new Point(15, 75);
         txtServidor.Width = 460;
-        txtServidor.PlaceholderText = @"192.168.2.10\SQLEXPRESS ou nome do servidor";
+        txtServidor.PlaceholderText = @"NOMESERVIDOR\SQLEXPRESS ou endereço IP";
 
         // lblBanco
         lblBanco.Text = "Banco de dados:";
@@ -77,7 +77,7 @@ partial class DbSettingsForm
         // txtBanco
         txtBanco.Location = new Point(15, 125);
         txtBanco.Width = 460;
-        txtBanco.PlaceholderText = "BigCardDB";
+        txtBanco.PlaceholderText = "NomeDoBanco";
 
         // chkWindowsAuth
         chkWindowsAuth.Text = "Usar autenticação do Windows (Integrated Security)";

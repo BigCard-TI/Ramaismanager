@@ -108,7 +108,7 @@ partial class LoginForm
         MaximizeBox = false;
         MinimizeBox = false;
         StartPosition = FormStartPosition.CenterScreen;
-        Text = "Login";
+        Text = "Login - Acesso à Lista de Ramais";
         AcceptButton = btnEntrar;
         CancelButton = btnCancelar;
         KeyPreview = true;

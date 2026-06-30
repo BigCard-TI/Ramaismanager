@@ -22,7 +22,7 @@ public class AppSettings
     /// Ajuste aqui apenas o valor inicial sugerido — depois disso, tudo é editado
     /// pelo painel oculto de configurações, sem precisar mexer no código.
     /// </summary>
-    private const string DefaultSuggestedPath = @"\\192.168.2.57\Interno\MicroSIP\Contacts.xml";
+    private const string DefaultSuggestedPath = @"\\SERVIDOR\Compartilhamento\MicroSIP\Contacts.xml";
 
     public static AppSettings Load()
     {

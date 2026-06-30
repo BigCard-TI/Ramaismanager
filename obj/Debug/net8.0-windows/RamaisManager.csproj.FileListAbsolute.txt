@@ -52,3 +52,4 @@ C:\Users\rafael.souza\Desktop\BC - Rafael\Projects\Projects\Ramaismanager\obj\De
 C:\Users\rafael.souza\Desktop\BC - Rafael\Projects\Projects\Ramaismanager\obj\Debug\net8.0-windows\RamaisManager.MainForm.resources
 C:\Users\rafael.souza\Desktop\BC - Rafael\Projects\Projects\Ramaismanager\obj\Debug\net8.0-windows\RamaisManager.SettingsForm.resources
 C:\Users\rafael.souza\Desktop\BC - Rafael\Projects\Projects\Ramaismanager\obj\Debug\net8.0-windows\RamaisManager.csproj.GenerateResource.cache
+C:\Users\rafael.souza\Desktop\BC - Rafael\Projects\Projects\Ramaismanager\obj\Debug\net8.0-windows\RamaisManager.LoginForm.resources

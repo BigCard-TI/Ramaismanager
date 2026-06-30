@@ -11,7 +11,7 @@ namespace RamaisManager.Security;
 /// </summary>
 public static class ConnectionStringVault
 {
-    private const string RegistryPath = @"Software\BigCard\RamaisManager";
+    private const string RegistryPath = @"Software\RamaisManager";
     private const string ValueName = "DbConnectionProtected";
 
     public static void Save(string connectionString)

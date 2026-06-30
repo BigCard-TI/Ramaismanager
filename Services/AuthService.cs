@@ -6,6 +6,27 @@ namespace RamaisManager.Services;
 public class OperadorAutenticado
 {
     public string Codigo { get; init; } = string.Empty;
+    public string Nome { get; init; } = string.Empty;
+
+    /// <summary>
+    /// Apenas o primeiro nome, extraído de Nome (ex.: "RENAN SOUZA" → "Renan").
+    /// Usado para exibição amigável na tela principal.
+    /// </summary>
+    public string PrimeiroNome
+    {
+        get
+        {
+            if (string.IsNullOrWhiteSpace(Nome)) return Codigo;
+
+            var primeiro = Nome.Trim().Split(' ', StringSplitOptions.RemoveEmptyEntries)[0];
+
+            // Deixa só a primeira letra maiúscula, resto minúsculo (caso o banco
+            // guarde tudo em caixa alta, ex.: "RENAN" → "Renan").
+            return primeiro.Length > 1
+                ? char.ToUpper(primeiro[0]) + primeiro[1..].ToLower()
+                : primeiro.ToUpper();
+        }
+    }
 }
 
 public class DbConnectionException : Exception
@@ -42,7 +63,7 @@ public class AuthService
             using var conn = new SqlConnection(connectionString);
             conn.Open();
 
-            const string sql = "SELECT TOP 1 CODIGO FROM USUARIOS (NOLOCK) WHERE CODIGO = @codigo AND SENHA = @senha";
+            const string sql = "SELECT TOP 1 CODIGO, NOME FROM USUARIOS WHERE CODIGO = @codigo AND SENHA = @senha";
 
             using var cmd = new SqlCommand(sql, conn);
             cmd.Parameters.AddWithValue("@codigo", codigo.Trim());
@@ -51,7 +72,11 @@ public class AuthService
             using var reader = cmd.ExecuteReader();
             if (reader.Read())
             {
-                return new OperadorAutenticado { Codigo = reader["CODIGO"].ToString() ?? codigo.Trim() };
+                return new OperadorAutenticado
+                {
+                    Codigo = reader["CODIGO"].ToString() ?? codigo.Trim(),
+                    Nome = reader["NOME"].ToString() ?? string.Empty,
+                };
             }
 
             return null;
