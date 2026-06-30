@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BigCard TI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5448c7124e5bce4676b6bc8a07f6fb3eb8b49c43")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df571ec1433bc0049cdc18c1a17b4faddd2bb4c6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Gerenciador de Ramais")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RamaisManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
