@@ -42,7 +42,7 @@ public class AuthService
             using var conn = new SqlConnection(connectionString);
             conn.Open();
 
-            const string sql = "SELECT TOP 1 CODIGO FROM USUARIOS WHERE CODIGO = @codigo AND SENHA = @senha";
+            const string sql = "SELECT TOP 1 CODIGO FROM USUARIOS (NOLOCK) WHERE CODIGO = @codigo AND SENHA = @senha";
 
             using var cmd = new SqlCommand(sql, conn);
             cmd.Parameters.AddWithValue("@codigo", codigo.Trim());
