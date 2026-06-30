@@ -88,7 +88,6 @@ partial class LoginForm
         btnCancelar.Click += btnCancelar_Click;
 
         // lblHintConfig
-        lblHintConfig.Text = "Problemas para conectar? Avise o TI.";
         lblHintConfig.ForeColor = Color.Gray;
         lblHintConfig.Font = new Font(lblHintConfig.Font.FontFamily, 8);
         lblHintConfig.Location = new Point(20, 268);

@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "LoginForm.Designer.cs",
               "ToolTip": "C:\\Users\\rafael.souza\\Desktop\\BC - Rafael\\Projects\\Projects\\Ramaismanager\\LoginForm.Designer.cs",
               "RelativeToolTip": "LoginForm.Designer.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFkAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-30T15:47:39.087Z",
               "EditorCaption": ""
@@ -55,8 +55,7 @@
               "RelativeToolTip": "LoginForm.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAAABMAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-30T15:47:36.769Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-30T15:47:36.769Z"
             },
             {
               "$type": "Document",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "MainForm.cs",
               "ViewState": "AgIAALwAAAAAAAAAAAAhwNcAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-30T15:46:19.566Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-30T15:46:19.566Z"
             },
             {
               "$type": "Document",
@@ -81,8 +79,7 @@
               "RelativeToolTip": "Services\\AuthService.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAMwCEAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-30T15:45:58.857Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-30T15:45:58.857Z"
             },
             {
               "$type": "Document",
@@ -94,8 +91,7 @@
               "RelativeToolTip": "Config\\AppSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-30T15:45:41.171Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-30T15:45:41.171Z"
             }
           ]
         }
