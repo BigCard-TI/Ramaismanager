@@ -7,7 +7,6 @@ public partial class LoginForm : Form
 {
     private readonly string _connectionString;
     private readonly AuthService _authService = new();
-    private readonly LoginThrottle _throttle = new();
 
     public OperadorAutenticado? OperadorLogado { get; private set; }
 
@@ -45,12 +44,6 @@ public partial class LoginForm : Form
     {
         lblErro.Text = "";
 
-        if (_throttle.EstaBloqueado(out var tempoRestante))
-        {
-            lblErro.Text = $"Muitas tentativas incorretas. Tente novamente em {Math.Ceiling(tempoRestante.TotalMinutes)} min.";
-            return;
-        }
-
         var codigo = txtCodigo.Text.Trim();
         var senha = txtSenha.Text.Trim();
 
@@ -74,17 +67,12 @@ public partial class LoginForm : Form
 
             if (operador == null)
             {
-                _throttle.RegistrarFalha();
-                var restantes = _throttle.TentativasRestantes;
-                lblErro.Text = restantes > 0
-                    ? $"Código ou senha inválidos. Tentativas restantes: {restantes}."
-                    : "Código ou senha inválidos. Acesso temporariamente bloqueado.";
+                lblErro.Text = "Código ou senha inválidos.";
                 txtSenha.Clear();
                 txtSenha.Focus();
                 return;
             }
 
-            _throttle.RegistrarSucesso();
             OperadorLogado = operador;
             DialogResult = DialogResult.OK;
             Close();
