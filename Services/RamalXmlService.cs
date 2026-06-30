@@ -74,6 +74,8 @@ public class RamalXmlService
                         Presence = Attr(c, "presence", "0"),
                         Starred = Attr(c, "starred", "0"),
                         Directory = Attr(c, "directory", "0"),
+                        AlteradoPor = Attr(c, "alteradoPor"),
+                        AlteradoEm = Attr(c, "alteradoEm"),
                     });
                 }
 
@@ -127,7 +129,9 @@ public class RamalXmlService
                     new XAttribute("info", r.Info ?? ""),
                     new XAttribute("presence", r.Presence ?? "0"),
                     new XAttribute("starred", r.Starred ?? "0"),
-                    new XAttribute("directory", r.Directory ?? "0")
+                    new XAttribute("directory", r.Directory ?? "0"),
+                    new XAttribute("alteradoPor", r.AlteradoPor ?? ""),
+                    new XAttribute("alteradoEm", r.AlteradoEm ?? "")
                 ))
             )
         );

@@ -16,6 +16,50 @@ ou .NET 8 SDK + `dotnet build`.
    ```
    O executável fica em `bin\Release\net8.0-windows\` (ou na pasta de publish).
 
+## Login obrigatório (novo)
+
+Antes de abrir a tela principal, o programa exige login do operador, validado
+contra a tabela `USUARIOS` (campos `CODIGO`, `SENHA`) no SQL Server — a mesma
+base usada pelos demais sistemas internos.
+
+A senha é numérica (até 6 dígitos) e é comparada **cifrada**, usando o mesmo
+cifrador posicional já usado em outros projetos internos (não é hash — é
+reversível, mas comparamos a versão cifrada diretamente, sem decodificar a
+senha do banco).
+
+### Configurar a conexão com o banco (primeira vez em cada máquina)
+
+Na tela de login, pressione **`Ctrl + Shift + Alt + C`**. Isso abre uma tela
+para informar servidor, banco, usuário/senha SQL (ou autenticação do Windows),
+testar a conexão, e salvar.
+
+A connection string é gravada no registro do Windows em:
+```
+HKEY_CURRENT_USER\Software\BigCard\RamaisManager
+```
+protegida com **DPAPI** (`DataProtectionScope.CurrentUser`) — mesmo padrão
+usado no MapaMaquinas e no DbMapper. Isso significa que o valor só pode ser
+decifrado pelo mesmo usuário do Windows na mesma máquina que o configurou;
+não adianta copiar o valor do registro para outra máquina/usuário.
+
+De dentro da tela principal, o mesmo painel pode ser reaberto com
+**`Ctrl + Shift + Alt + B`**, caso precise reconfigurar sem reiniciar o login.
+
+### Proteção contra força bruta
+
+Após 5 tentativas de login incorretas seguidas, a tela bloqueia novas
+tentativas por 2 minutos. Esse controle é local (em memória, por execução do
+programa) — não duplicamos isso no banco, já que a tabela `USUARIOS` é
+compartilhada com outros sistemas.
+
+### Auditoria
+
+Cada ramal criado ou editado passa a registrar automaticamente quem mexeu
+(`CODIGO` do operador logado) e quando, em dois atributos extras gravados no
+próprio XML (`alteradoPor`, `alteradoEm`). O MicroSIP ignora atributos que não
+reconhece, então isso não interfere no funcionamento dele — mas dá rastreio
+de quem editou o quê, sem precisar de log separado.
+
 ## Primeira execução
 
 Na primeira vez que abrir o programa em uma máquina, ele vai avisar que o
@@ -66,15 +110,22 @@ para outras máquinas, se preferir distribuir já configurado).
 
 ```
 RamaisManager/
-├── Program.cs                  → ponto de entrada
+├── Program.cs                  → ponto de entrada (login → tela principal)
+├── LoginForm.cs / .Designer.cs → tela de login do operador (CODIGO/SENHA)
+├── DbSettingsForm.cs / .Designer.cs → painel oculto de conexão com o banco
 ├── MainForm.cs / .Designer.cs  → tela principal (grid de ramais)
-├── SettingsForm.cs / .Designer.cs → painel oculto de configuração do caminho
+├── SettingsForm.cs / .Designer.cs → painel oculto de configuração do caminho do XML
 ├── Models/
 │   └── Ramal.cs                → modelo de dados de um contato/ramal
 ├── Config/
 │   └── AppSettings.cs          → leitura/gravação do caminho do XML (AppData)
+├── Security/
+│   ├── SenhaCipher.cs          → cifrador numérico posicional (senha de login)
+│   ├── ConnectionStringVault.cs → connection string no registro HKCU + DPAPI
+│   └── LoginThrottle.cs        → bloqueio temporário após tentativas falhas
 └── Services/
-    └── RamalXmlService.cs      → leitura/escrita do XML com lock e backup
+    ├── RamalXmlService.cs      → leitura/escrita do XML com lock e backup
+    └── AuthService.cs          → validação de login contra a tabela USUARIOS
 ```
 
 ## Distribuição para os colaboradores

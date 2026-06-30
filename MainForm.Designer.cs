@@ -94,6 +94,9 @@ partial class MainForm
         dgvRamais.BorderStyle = BorderStyle.Fixed3D;
         dgvRamais.AllowUserToOrderColumns = false;
         dgvRamais.EditMode = DataGridViewEditMode.EditOnKeystrokeOrF2;
+        dgvRamais.ShowCellToolTips = true;
+        dgvRamais.ShowRowErrors = true;
+        dgvRamais.ShowCellErrors = true;
 
         // lblPath
         lblPath.AutoSize = true;
@@ -122,7 +125,6 @@ partial class MainForm
         Controls.Add(lblPath);
         Controls.Add(statusStrip);
         MinimumSize = new Size(700, 400);
-        Text = "Gerenciador de Ramais - MicroSIP";
         StartPosition = FormStartPosition.CenterScreen;
         KeyPreview = true;
 

@@ -12,19 +12,18 @@ public partial class MainForm : Form
     private BindingList<Ramal> _ramais = new();
     private BindingSource _bindingSource = new();
     private bool _hasUnsavedChanges = false;
+    private readonly OperadorAutenticado _operador;
 
-    // Combinação secreta para abrir o painel de configurações (caminho do XML).
-    // Ctrl+Shift+Alt+C
-    private bool _ctrlShiftAltCArmed = false;
-
-    public MainForm()
+    public MainForm(OperadorAutenticado operador)
     {
         InitializeComponent();
 
+        _operador = operador;
         _settings = AppSettings.Load();
 
         SetupGrid();
 
+        this.Text = $"Gerenciador de Ramais - MicroSIP — Operador: {_operador.Codigo}";
         this.KeyDown += MainForm_KeyDown;
         this.FormClosing += MainForm_FormClosing;
         this.Load += MainForm_Load;
@@ -69,7 +68,88 @@ public partial class MainForm : Form
         });
 
         dgvRamais.CellValueChanged += (s, e) => MarkDirty();
-        dgvRamais.UserDeletedRow += (s, e) => MarkDirty();
+        dgvRamais.UserDeletedRow += (s, e) => { MarkDirty(); dgvRamais.Invalidate(); };
+
+        // Aviso de duplicação de ramal:
+        // - CellValidating: bloqueia sair da célula "Ramal" se o valor digitado
+        //   já existir em outro contato, mostrando um erro junto à célula.
+        // - CellFormatting: pinta em vermelho qualquer célula "Ramal" cujo número
+        //   esteja duplicado em algum lugar da lista (cobre o caso de duas linhas
+        //   já existentes ficarem iguais por edição indireta, reordenação, etc.).
+        dgvRamais.CellValidating += dgvRamais_CellValidating;
+        dgvRamais.CellFormatting += dgvRamais_CellFormatting;
+        dgvRamais.CellEndEdit += (s, e) =>
+        {
+            dgvRamais.Invalidate();
+            if (dgvRamais.Rows[e.RowIndex].DataBoundItem is Ramal ramal)
+            {
+                ramal.AlteradoPor = _operador.Codigo;
+                ramal.AlteradoEm = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            }
+        };
+        dgvRamais.DataError += (s, e) => e.ThrowException = false;
+    }
+
+    /// <summary>
+    /// Impede que o usuário saia da célula "Ramal" se o número digitado
+    /// já estiver em uso por outro contato da lista.
+    /// </summary>
+    private void dgvRamais_CellValidating(object? sender, DataGridViewCellValidatingEventArgs e)
+    {
+        if (dgvRamais.Columns[e.ColumnIndex].Name != "colNumber") return;
+
+        var novoValor = e.FormattedValue?.ToString()?.Trim() ?? string.Empty;
+        if (string.IsNullOrEmpty(novoValor)) return; // erro de "vazio" já é pego na validação de salvar
+
+        var linhaAtual = dgvRamais.Rows[e.RowIndex].DataBoundItem as Ramal;
+
+        var duplicado = _ramais.Any(r =>
+            r != linhaAtual &&
+            string.Equals(r.Number.Trim(), novoValor, StringComparison.OrdinalIgnoreCase));
+
+        if (duplicado)
+        {
+            dgvRamais.Rows[e.RowIndex].ErrorText =
+                $"O ramal {novoValor} já está em uso por outro contato.";
+            e.Cancel = true;
+        }
+        else
+        {
+            dgvRamais.Rows[e.RowIndex].ErrorText = string.Empty;
+        }
+    }
+
+    /// <summary>
+    /// Pinta em vermelho claro qualquer célula de número de ramal que esteja
+    /// duplicada em qualquer lugar da lista, mesmo fora da edição atual.
+    /// </summary>
+    private void dgvRamais_CellFormatting(object? sender, DataGridViewCellFormattingEventArgs e)
+    {
+        if (dgvRamais.Columns[e.ColumnIndex].Name != "colNumber") return;
+        if (e.RowIndex < 0 || e.RowIndex >= dgvRamais.Rows.Count) return;
+
+        if (dgvRamais.Rows[e.RowIndex].DataBoundItem is not Ramal ramalAtual) return;
+
+        var numero = ramalAtual.Number?.Trim() ?? string.Empty;
+        if (string.IsNullOrEmpty(numero)) return;
+
+        var ocorrencias = _ramais.Count(r =>
+            string.Equals(r.Number.Trim(), numero, StringComparison.OrdinalIgnoreCase));
+
+        var cell = dgvRamais.Rows[e.RowIndex].Cells[e.ColumnIndex];
+
+        if (ocorrencias > 1)
+        {
+            cell.Style.BackColor = Color.FromArgb(255, 205, 210);
+            cell.Style.ForeColor = Color.FromArgb(183, 28, 28);
+            cell.ToolTipText = $"Atenção: o ramal {numero} está duplicado em {ocorrencias} contatos.";
+        }
+        else
+        {
+            cell.Style.BackColor = dgvRamais.DefaultCellStyle.BackColor;
+            cell.Style.ForeColor = dgvRamais.DefaultCellStyle.ForeColor;
+            cell.ToolTipText = string.Empty;
+        }
     }
 
     private void LoadRamais()
@@ -119,7 +199,13 @@ public partial class MainForm : Form
 
     private void btnAdd_Click(object? sender, EventArgs e)
     {
-        var novo = new Ramal { Name = "NOVO RAMAL", Number = SugerirProximoNumero() };
+        var novo = new Ramal
+        {
+            Name = "NOVO RAMAL",
+            Number = SugerirProximoNumero(),
+            AlteradoPor = _operador.Codigo,
+            AlteradoEm = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
+        };
         _ramais.Add(novo);
         MarkDirty();
 
@@ -291,10 +377,18 @@ public partial class MainForm : Form
 
     private void MainForm_KeyDown(object? sender, KeyEventArgs e)
     {
-        // Atalho oculto para configurações: Ctrl+Shift+Alt+C
+        // Atalho oculto para configurações do XML: Ctrl+Shift+Alt+C
         if (e.Control && e.Shift && e.Alt && e.KeyCode == Keys.C)
         {
             AbrirConfiguracoes();
+            e.Handled = true;
+        }
+
+        // Atalho oculto para configurações do banco de dados: Ctrl+Shift+Alt+B
+        if (e.Control && e.Shift && e.Alt && e.KeyCode == Keys.B)
+        {
+            using var dbForm = new DbSettingsForm();
+            dbForm.ShowDialog(this);
             e.Handled = true;
         }
     }

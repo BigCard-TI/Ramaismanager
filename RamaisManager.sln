@@ -1,9 +1,9 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+# Visual Studio Version 18
+VisualStudioVersion = 18.6.11822.322 stable
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RamaisManager", "RamaisManager\RamaisManager.csproj", "{8B6B7B1A-9C2F-4B9B-9F6E-1B2B3C4D5E6F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RamaisManager", "RamaisManager.csproj", "{2CA19817-0631-CB70-5548-2FCB8EF9EF98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,12 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8B6B7B1A-9C2F-4B9B-9F6E-1B2B3C4D5E6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8B6B7B1A-9C2F-4B9B-9F6E-1B2B3C4D5E6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8B6B7B1A-9C2F-4B9B-9F6E-1B2B3C4D5E6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8B6B7B1A-9C2F-4B9B-9F6E-1B2B3C4D5E6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CA19817-0631-CB70-5548-2FCB8EF9EF98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CA19817-0631-CB70-5548-2FCB8EF9EF98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CA19817-0631-CB70-5548-2FCB8EF9EF98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CA19817-0631-CB70-5548-2FCB8EF9EF98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {21EF3693-3AD9-4190-900F-AF567E58F64F}
 	EndGlobalSection
 EndGlobal

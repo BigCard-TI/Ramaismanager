@@ -29,6 +29,12 @@ public class Ramal
     public string Starred { get; set; } = "0";
     public string Directory { get; set; } = "0";
 
+    // Auditoria: preenchidos automaticamente pelo MainForm ao criar/editar.
+    // Gravados como atributos extras no XML — o MicroSIP ignora atributos
+    // que não reconhece, então isso não interfere no funcionamento dele.
+    public string AlteradoPor { get; set; } = string.Empty;
+    public string AlteradoEm { get; set; } = string.Empty;
+
     /// <summary>
     /// Identificador único interno (para rastrear a linha na grid e detectar duplicatas).
     /// Não é salvo no XML.
