@@ -49,7 +49,7 @@ partial class SettingsForm
         // txtXmlPath
         txtXmlPath.Location = new Point(15, 78);
         txtXmlPath.Width = 430;
-        txtXmlPath.PlaceholderText = @"\\servidor\Interno\MicroSIP\Contacts.xml";
+        txtXmlPath.PlaceholderText = @"\\servidor\Interno\Ramais\Contacts.xml";
 
         // btnBrowse
         btnBrowse.Text = "...";
@@ -58,7 +58,6 @@ partial class SettingsForm
         btnBrowse.Click += btnBrowse_Click;
 
         // lblHint
-        lblHint.Text = "Dica: pode ser um caminho UNC (\\\\servidor\\pasta\\arquivo.xml)\nou uma unidade de rede mapeada (Z:\\pasta\\arquivo.xml).";
         lblHint.ForeColor = Color.Gray;
         lblHint.Font = new Font(lblHint.Font.FontFamily, 8);
         lblHint.Location = new Point(15, 108);
